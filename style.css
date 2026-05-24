@@ -52,15 +52,6 @@ header {
     color: blue;
 }
 
-/* HAMBURGER ICON 
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}*/
-
-
 
 /* HERO IMAGE */
 section img {
@@ -80,7 +71,7 @@ section img {
 .about-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 60px;
     gap: 50px;
 }
@@ -143,6 +134,7 @@ section img {
 
     .image-ring {
         margin: auto;
+        margin-top: 20px;
     }
 }
 
