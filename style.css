@@ -49,21 +49,18 @@ header {
 }
 
 .nav-links a:hover {
-    color: orange;
+    color: blue;
 }
 
-/* HAMBURGER ICON */
+/* HAMBURGER ICON 
 .menu-icon {
     display: none;
     font-size: 30px;
     color: white;
     cursor: pointer;
-}
-
-/* HIDE CHECKBOX
-#menu-toggle {
-    display: none;
 }*/
+
+
 
 /* HERO IMAGE */
 section img {
@@ -307,4 +304,5 @@ textarea {
         height: 250px;
     }
 }
+
 }
