@@ -27,7 +27,7 @@ header {
     position: sticky;
     top: 0;
 
-    z-index: 1000; /* 🔥 keeps header above everything */
+    z-index: 1000;
 }
 
 /* LOGO */
@@ -60,10 +60,10 @@ header {
     cursor: pointer;
 }
 
-/* HIDE CHECKBOX */
+/* HIDE CHECKBOX
 #menu-toggle {
     display: none;
-}
+}*/
 
 /* HERO IMAGE */
 section img {
@@ -101,7 +101,7 @@ section img {
     margin-top: 20px;
     margin-bottom: 15px;
 }
-/* OUTER CIRCLE (WHITE BORDER) */
+/* OUTER CIRCLE*/
 
 .image-ring {
     width: 280px;
@@ -115,7 +115,7 @@ section img {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* IMAGE (KEEP SHARP + PROPER FIT) */
+/* IMAGE*/
 .image-ring img {
     width: 100%;
     height: 100%;
@@ -125,10 +125,7 @@ section img {
     object-fit: cover;
     
     position: relative;
-    z-index: 1; /* lower than header */
-
-
-    /* 🔥 IMPORTANT: prevents blur rendering */
+    z-index: 1; 
     image-rendering: auto;
     transform: translateZ(0);
 }
@@ -154,20 +151,29 @@ section img {
 
 /* FOOTER */
 footer {
-    background-color: #e8d8c3; /* beige */
-    color: white;
+    background-color: #e8d8c3;
+    text-align: center;
+    color: black;
     padding: 40px;
 }
 
 footer a {
-    color: orange;
+    color: blue;
     text-decoration: none;
 }
 
+
 /* SOCIAL ICONS */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
 .socials img {
-    width: 40px;
-    margin: 10px;
+    width: 30px;   /* smaller icons */
+    height: 30px;
     transition: 0.3s;
 }
 
@@ -176,31 +182,63 @@ footer a {
 }
 
 /* FORM */
+/* FORM CONTAINER */
 form {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
 }
 
+/* LABELS */
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* INPUTS */
 form input,
 form textarea {
-    margin-bottom: 15px;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
 }
 
+/* FOCUS EFFECT */
+form input:focus,
+form textarea:focus {
+    border-color: blue;
+}
+
+/* BUTTON */
 form button {
+    margin-top: 15px;
     padding: 12px;
     background: black;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 6px;
     transition: 0.3s;
 }
 
 form button:hover {
-    background: orange;
+    background: blue;
+}
+
+textarea {
+    width: 50%;
+    min-height: 30px;
+    max-height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    font-family: Arial, sans-serif;
 }
 
 /* RESPONSIVE DESIGN */
