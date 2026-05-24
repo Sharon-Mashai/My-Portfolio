@@ -4,31 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharon Mashai Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- HEADER -->
 <header>
-    <table width="100%">
-        <tr>
 
-            <!-- LOGO -->
-            <td>
-                <img src="images/logo.png" width="50">
-            </td>
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+    </div>
 
-            <!-- NAVIGATION (TOP RIGHT) -->
-            <td align="right">
+    <!-- HAMBURGER MENU (CSS ONLY) -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-                <a href="home.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="contact.html">Contact Us</a>
+    <nav class="nav-links">
+        <a href="home.html">Home</a> |
+        <a href="about.html">About Me</a> |
+        <a href="contact.html">Contact Us</a>
+    </nav>
 
-            </td>
-
-        </tr>
-    </table>
 </header>
 
 <hr>
@@ -43,42 +40,38 @@
 <br><br>
 
 <!-- ABOUT ME SECTION -->
-<section>
+<section class="about-container">
 
-    <table width="100%">
-        <tr>
+    <div class="about-text">
 
-            <!-- LEFT TEXT -->
-            <td width="60%" valign="top">
+        <h1>About Me</h1>
 
-                <h1>Sharon Mashai</h1>
+        <p>
+            Hello.My name is Sharon Mashai.<br>
+            I am a computer Science graduate with a passion for technology and software development.<br>
+            I enjoy building web applications, solving technical problems, and learning new programming skills.
+        </p>
 
-                <p>
-                    I am an aspiring software developer and former IT support trainee. <br>
-                    I am passionate about web development,networking, and technology solutions.
-                </p>
+        <p>
+            I have experience with IT support, troubleshooting computers, working with switches and servers,<br>
+            and helping users remotely. I also enjoy working on web development projects and databases.
+        </p>
 
-                <p>
-                    I enjoy building websites, solving technical problems,<br>
-                     working with switches and servers,and helping users remotely.<br>
-                    I am known for my strong communication skills, <br>
-                    ability to work well with people, and a proactive approach to solving problems. <br>
-                    I adapt quickly, remain calm under pressure, and always aim to provide efficient
-                    and user-friendly solutions.
-                </p>
+        <h2>My Goals</h2>
 
-            </td>
+        <p>
+            My goal is to become a professional software developer and IT specialist while continuously improving my technical skills.
+        </p>
 
-            <!-- RIGHT IMAGE -->
-            <td align="center" width="40%">
-                <img src="images/profile.jpg" alt="Profile Picture" width="250">
-            </td>
+    </div>
 
-        </tr>
-    </table>
+    <div class="about-image">
+        <div class="image-ring">
+            <img src="images/profile.jpg" alt="Profile Picture">
+        </div>
+    </div>
 
 </section>
-
 <br><br>
 
 <hr>
@@ -117,20 +110,21 @@
             </td>
 
             <!-- EMBED MAP -->
-            <td width="33%" align="right" valign="top">
+            <!-- EMBED MAP -->
+<td class="map-cell" align="right" valign="top">
 
-                <h3>Embed Map </h3>
-               
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.8073270352784!2d29.484105075119825!3d-23.896449978571034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d9dd70ff5a99%3A0xca7cfb6e0ef03d4a!2s29%20Juno%20Ave%2C%20Sterpark%2C%20Polokwane%2C%200699!5e0!3m2!1sen!2sza!4v1779207251976!5m2!1sen!2sza" 
-                width="600" height="450" 
-                style="border:0;" allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+    <h3>Embed Map</h3>
 
-                </iframe>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.8073270352784!2d29.484105075119825!3d-23.896449978571034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d9dd70ff5a99%3A0xca7cfb6e0ef03d4a!2s29%20Juno%20Ave%2C%20Sterpark%2C%20Polokwane%2C%200699!5e0!3m2!1sen!2sza!4v1779207251976!5m2!1sen!2sza"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 
-            </td>
+</td>
 
         </tr>
     </table>

@@ -1,0 +1,272 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;  /* light gray */
+    color: #333;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #e8d8c3;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000; /* 🔥 keeps header above everything */
+}
+
+/* LOGO */
+.logo img {
+    width: 50px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* HERO IMAGE */
+section img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* ABOUT LAYOUT */
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+/* OUTER CIRCLE (WHITE BORDER) */
+
+.image-ring {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGE (KEEP SHARP + PROPER FIT) */
+.image-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid blue;
+
+    object-fit: cover;
+    
+    position: relative;
+    z-index: 1; /* lower than header */
+
+
+    /* 🔥 IMPORTANT: prevents blur rendering */
+    image-rendering: auto;
+    transform: translateZ(0);
+}
+.image-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid blue;   /* second circle */
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .image-ring {
+        margin: auto;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: #e8d8c3; /* beige */
+    color: white;
+    padding: 40px;
+}
+
+footer a {
+    color: orange;
+    text-decoration: none;
+}
+
+/* SOCIAL ICONS */
+.socials img {
+    width: 40px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: orange;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: #111;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+/* RESPONSIVE IFRAME */
+/* FIX TABLE CELL SO IT CAN SHRINK */
+.map-cell {
+    width: 33%;
+}
+
+/* RESPONSIVE MAP WRAPPER */
+.map-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* RESPONSIVE IFRAME */
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+
+    /* stack footer instead of 3 columns */
+    td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+}
+}
